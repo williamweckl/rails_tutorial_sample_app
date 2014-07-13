@@ -11,6 +11,7 @@ default: &default
 
 development:
   <<: *default
+  host: 127.0.0.1
   database: rails_tutorial
   username: rails_tutorial
   password: rails_tutorial
