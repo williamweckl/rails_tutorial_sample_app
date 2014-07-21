@@ -21,6 +21,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
+  host: 127.0.0.1
   database: rails_tutorial
   username: rails_tutorial
   password: rails_tutorial
