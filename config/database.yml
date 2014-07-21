@@ -22,7 +22,7 @@ development:
 test:
   <<: *default
   host: 127.0.0.1
-  database: rails_tutorial
+  database: rails_tutorial_test
   username: rails_tutorial
   password: rails_tutorial
 
