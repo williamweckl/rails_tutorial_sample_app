@@ -8,6 +8,7 @@ gem 'pg'
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'rspec-its'
   gem 'factory_girl_rails'
 end
 group :test do
