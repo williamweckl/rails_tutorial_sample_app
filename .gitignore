@@ -20,6 +20,7 @@ doc/
 *.swp
 *~
 .project
+.directory
 .DS_Store
 .idea
 .secret
