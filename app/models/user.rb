@@ -1,5 +1,7 @@
 #encoding: UTF-8
 class User < ActiveRecord::Base
+  #Pagination
+  self.per_page = 5
 
   #Validations
   validates :name, presence: true, length: {maximum: 50}
