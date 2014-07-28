@@ -3,6 +3,9 @@ class User < ActiveRecord::Base
   #Pagination
   self.per_page = 5
 
+  #Relations
+  has_many :microposts, dependent: :destroy
+
   #Validations
   validates :name, presence: true, length: {maximum: 50}
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(?:\.[a-z\d\-]+)*\.[a-z]+\z/i

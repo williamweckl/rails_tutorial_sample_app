@@ -166,13 +166,13 @@ describe "User pages" do
 
   describe "destroy" do
     let(:admin) { FactoryGirl.create(:admin) }
-    let(:user) { FactoryGirl.create(:user) }
+    let!(:user) { FactoryGirl.create(:user) }
 
     before { sign_in admin, :no_capybara => true }
 
-    #it "should delete another user" do
-    #  expect{ delete user_path(user) }.to change(User, :count).by(-1)
-    #end
+    it "should delete another user" do
+      expect{ delete user_path(user) }.to change(User, :count).by(-1)
+    end
 
     it "should not delete own user" do
       expect{ delete user_path(admin) }.to_not change(User, :count)
