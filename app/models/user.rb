@@ -33,7 +33,8 @@ class User < ActiveRecord::Base
 
   def feed
     #Micropost.where("user_id = ?", id)
-    microposts #exactly the same above
+    #microposts #exactly the same above
+    Micropost.from_users_followed_by(self)
   end
 
   def following?(other_user)
