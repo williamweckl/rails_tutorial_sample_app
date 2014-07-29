@@ -140,6 +140,35 @@ aside {
   }
 }
 
+.stats {
+  overflow: auto;
+  a {
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid $gray-light;
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: $brand-primary;
+    }
+  }
+  strong {
+    display: block;
+  }
+}
+
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+  .gravatar {
+    margin: 1px 1px;
+  }
+}
+
 /* miscellaneous */
 
 .debug_dump {
@@ -162,6 +191,10 @@ input, textarea, select, .uneditable-input {
 
 input {
   height: auto !important;
+
+  &.btn {
+    width: auto !important;
+  }
 }
 
 #error_explanation {
